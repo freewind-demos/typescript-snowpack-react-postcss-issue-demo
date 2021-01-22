@@ -1,13 +1,14 @@
-TypeScript Snowpack React Demo
+TypeScript Snowpack React PostCss Issue Demo
 =================================
 
-使用snowpack来开发react，体验不错，配置简单、速度快、fast refresh
-
-注意：导入文件时大小写一定要完全匹配，否则修改后不生效，卡了几个小时
+If the postcss file has custom extension, e.g. `.pcss` other than '.css', even if we have configured 
+`@snowpack/plugin-postcss` with `input: ['.pcss']`, it doesn't work.
 
 ```
 npm install
 npm run demo
 ```
 
-It will open page on browser automatically.
+On the opened page, the postcss defined in `index.pcss` are not applied.
+
+If you change `index.pcss` to `index.css` and remove configuration of `input: ['.pcss']`, it will be OK. 

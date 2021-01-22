@@ -5,7 +5,10 @@ module.exports = {
     './src/': '/'
   },
   plugins: [
-    '@snowpack/plugin-react-refresh'
+    '@snowpack/plugin-react-refresh',
+    ['@snowpack/plugin-postcss', {
+      input: ['.pcss']
+    }],
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
